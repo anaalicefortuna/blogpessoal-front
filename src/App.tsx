@@ -1,19 +1,29 @@
-import React from 'react';
+ import React from 'react';
+import {BrowserRouter as Router, Route, Routes} from 'react-router-dom'
 import logo from './logo.svg';
 import './App.css';
-import { Title } from './components/Title/Ttile'
-import { } from './components/Text/Text'
+import NavBar from './components/statics/navbar/NavBar'
+import { Home } from './pages/home/Home';
+import About from './pages/about/About';
+import { Login } from '@mui/icons-material';
+
 
 function App() {
-  const nome = ''
-  return (
-    <>
-      <Title nome='' />
-      <p>
-      
-      </p>
-    </>
 
+  return (
+
+    <Router>
+      <NavBar />
+      
+      <Routes>
+        <Route path= '/home' element={<Home />} />
+        <Route path= '/about' element={<About />} />
+        <Route path='/Login' element={<Login />} />
+        
+      </Routes>
+
+
+    </Router>
 
   );
 }
