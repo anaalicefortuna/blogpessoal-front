@@ -1,28 +1,29 @@
- import React from 'react';
-import {BrowserRouter as Router, Route, Routes} from 'react-router-dom'
-import logo from './logo.svg';
+import React from 'react';
+import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 import './App.css';
-import NavBar from './components/statics/navbar/NavBar'
-import { Home } from './pages/home/Home';
-import About from './pages/about/About';
-import { Login } from '@mui/icons-material';
+import Footer from './components/statics/footer/Footer';
+import Navbar from './components/statics/navbar/NavBar';
+import CadastroUsuario from './pages/cadastroUsuario/CadastroUsuario';
+import Home from './pages/home/Home';
+import Login from './pages/login/Login';
 
 
 function App() {
-
   return (
-
     <Router>
-      <NavBar />
-      
+      <Navbar />
       <Routes>
-        <Route path= '/home' element={<Home />} />
-        <Route path= '/about' element={<About />} />
-        <Route path='/Login' element={<Login />} />
-        
+
+        <Route path="/" element={<Login  />} />
+
+        <Route path="/home" element={<Home />} />
+
+        <Route path="/login" element={<Login />} />
+
+        <Route path="/cadastrousuario" element={<CadastroUsuario/>} />
+
       </Routes>
-
-
+      <Footer />
     </Router>
 
   );
