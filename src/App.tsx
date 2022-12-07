@@ -1,4 +1,5 @@
 import React from 'react';
+import { Provider } from 'react-redux';
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 import './App.css';
 import CadastroPost from './components/postagem/cadastrar/CadastrarPost';
@@ -12,10 +13,14 @@ import ListaTema from './components/tema/lista/ListaTema';
 import CadastroUsuario from './pages/cadastroUsuario/CadastroUsuario';
 import Home from './pages/home/Home';
 import Login from './pages/login/Login';
+import store from './store/store';
 
 
 function App() {
   return (
+
+    <Provider store={store}>
+    <ToastContainer />
     <Router>
       <Navbar />
       <Routes>
@@ -49,6 +54,7 @@ function App() {
       </Routes>
       <Footer />
     </Router>
+        </Provider>
 
   );
 }
