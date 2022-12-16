@@ -14,6 +14,7 @@ import CadastroUsuario from './pages/cadastroUsuario/CadastroUsuario';
 import Home from './pages/home/Home';
 import Login from './pages/login/Login';
 import store from './store/store';
+import { ToastContainer } from 'react-toastify';
 
 
 function App() {
